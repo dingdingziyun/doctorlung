@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Thanks for using Doctor Lung!</h1>
+<h3>Following is your sound spectrogram</h3>
+<div><img src={{wavepng_filename}} width="600"></div>
+
+
+<p>The total length of uploaded sound is {{audio_length}} seconds.</p>
+<p>There are <b>{{n_wheezes}}</b> wheezes and <b>{{n_crackles}}</b> crackles predicted in your sound.</p>
+
+<p>You could refer to the following histogram to see where your situation<b>(red line)</b> is located among other 86 patients. Your number of wheezes is better than <b>{{wheezes_percentile}}%</b> patients. Your number of crackles is better than <b>{{crackles_percentile}}%</b> patients. Based on both wheezes and crackles detected in your sound, you are better than <b>{{together_percentile}}%</b> patients. </p>
+
+<div class="row">
+  <div class="column">
+    <img src={{crackles_fig_path}} width="400">
+  </div>
+  <div class="column">
+    <img src={{wheezes_fig_path}} width="400">
+  </div>
+</div>
+
+<div><img src={{scatter_plot_path}} width="600"></div>
+{% endblock content %}

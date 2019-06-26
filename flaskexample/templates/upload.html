@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<body>
+  <h1>Upload respiratory sound</h1>
+  <h2>Please upload the ".wav" format, and the length of the sound file should be at least 30 seconds.</h2>
+  <form action = "/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <!-- <input type = "file" name = "file" class=""/> -->
+         <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Upload</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" name="file" class="custom-file-input" id="inputGroupFile01">
+              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+          </div>
+         <input type = "submit" class="btn btn-success"/>
+      </form>
+</body>
+{% endblock content %}

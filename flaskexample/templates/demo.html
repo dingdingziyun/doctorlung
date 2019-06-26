@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Thanks for using Doctor Lung!</h1>
+<h3>Following is your sound spectrogram</h3>
+<div><img src='../static/200_2p2_Pl_mc_AKGC417L_wav.png' width="600"></div>
+
+
+<p>The total length of uploaded sound is 20 seconds.</p>
+<p>There are <b>2</b> wheezes and <b>2</b> crackles predicted in your sound.</p>
+
+<p>You could refer to the following histogram to see where your situation<b>(red line)</b> is located among other 86 patients. Your number of wheezes is better than <b>48.84%</b> patients. Your number of crackles is better than <b>62.79%</b> patients. Based on both wheezes and crackles detected in your sound, you are better than <b>88.37%</b> patients. </p>
+
+<div class="row">
+  <div class="column">
+    <img src='../static/200_2p2_Pl_mc_AKGC417L_crackles.png' width="400">
+  </div>
+  <div class="column">
+    <img src='../static/200_2p2_Pl_mc_AKGC417L_wheezes.png' width="400">
+  </div>
+</div>
+
+<div><img src='../static/200_2p2_Pl_mc_AKGC417L_scatter.png' width="600"></div>
+{% endblock content %}
